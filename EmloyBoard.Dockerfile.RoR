@@ -1,0 +1,7 @@
+FROM mydockercity/rubyonrails:latest-alpine
+
+WORKDIR /usr/src/app
+
+COPY ./EmloyBoard/Gemfile* .
+
+RUN bundle install

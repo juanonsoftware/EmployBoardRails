@@ -1,0 +1,9 @@
+services:
+  web:
+    build: 
+        context: .
+        dockerfile: ./EmloyBoard.Dockerfile.RoR
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./EmloyBoard:/usr/src/app
