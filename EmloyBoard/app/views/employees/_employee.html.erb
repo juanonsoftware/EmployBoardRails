@@ -1,9 +1,7 @@
 
 <div class="col" id="<%= dom_id employee %>">
         <div class="card shadow-sm">
-          <% unless employee.image_as_thumbnail.nil? %>        
-              <%= image_tag employee.image_as_thumbnail, class: "card-img-top" %>
-            <% end %>
+              <%= image_tag employee.image_as_thumbnail, class: "card-img-top" if employee.avatar.attached? %>
 
           <div class="card-body">
             <h5 class="card-title"><%= employee.full_name %></h5>
