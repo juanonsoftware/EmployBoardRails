@@ -22,6 +22,11 @@
   </div>
 
   <div class="mb-3">
+    <%= form.label :phone_number, style: "display: block", class: "form-label" %>
+    <%= form.text_field :phone_number, class: "form-control w-50" %>
+  </div>
+
+  <div class="mb-3">
     <%= form.label :avatar, style: "display: block", class: "form-label" %>
     <%= form.file_field :avatar, class: "form-control w-50" %>
   </div>
