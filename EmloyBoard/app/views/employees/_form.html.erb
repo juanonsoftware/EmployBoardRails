@@ -33,6 +33,6 @@
 	<% end %>
 </div>
 <div class="feature col" id="epmloyee_form">
-	<h3 class="fs-2 text-body-emphasis">Photo</h3>
-	<%= image_tag employee.image_as_thumbnail if employee.avatar.attached? %>
+	<h3 class="fs-2 text-body-emphasis">Avatar</h3>
+	<%= image_tag employee.avatar_as_thumbnail(350, 350), class: "img-thumbnail" if employee.avatar.attached? %>
 </div>

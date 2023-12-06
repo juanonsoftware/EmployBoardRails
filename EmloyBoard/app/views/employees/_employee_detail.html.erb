@@ -11,5 +11,5 @@
 </div>
 <div class="feature col">
 	<h3 class="fs-2 text-body-emphasis">Avatar</h3>
-	<%= image_tag employee.avatar_as_thumbnail(350, 350) if employee.avatar.attached? %>
+	<%= image_tag employee.avatar_as_thumbnail(350, 350), class: "img-thumbnail" if employee.avatar.attached? %>
 </div>

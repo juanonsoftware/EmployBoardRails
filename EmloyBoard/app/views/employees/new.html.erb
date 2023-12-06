@@ -1,13 +1,10 @@
-<div class="container" id="employees">
-  
-  <h1>New employee</h1>
-
-<%= render "form", employee: @employee %>
-
-<br>
-
-<div>
-  <%= link_to "Back to employees", employees_path %>
-</div>
-
+<div class="container px-4 py-5" id="employee_new">
+	<p style="color: green"><%= notice %></p>
+	<h2 class="pb-2 border-bottom">New employee</h2>
+	<div class="row g-4 py-5 row-cols-1 row-cols-sm-2">
+		<%= render "form", employee: @employee %>
+	</div>
+	<div>
+		<%= link_to "Back to employees", employees_path %>
+	</div>
 </div>

@@ -92,6 +92,18 @@
 		<link href="https://getbootstrap.com/docs/5.3/examples/features/features.css" rel="stylesheet">
 	</head>
 	<body>
+		<header>
+			<nav class="navbar navbar-expand-md fixed-top">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<%= employees_path %>">Employees</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 		<main>
 			<%= yield %>
 		</main>
