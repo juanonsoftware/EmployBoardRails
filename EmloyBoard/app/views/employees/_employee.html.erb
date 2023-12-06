@@ -1,23 +1,10 @@
-
-<div class="col" id="<%= dom_id employee %>">
-        <div class="card shadow-sm">
-              <%= image_tag employee.image_as_thumbnail, class: "card-img-top" if employee.avatar.attached? %>
-
-          <div class="card-body">
-            <h5 class="card-title"><%= employee.full_name %></h5>
-            <p class="card-text">
-              Email: <%= employee.email %>
-              <br/>
-              Phone number: <%= employee.phone_number %>
-            </p>
-
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <%= link_to "View", employee, class: "btn btn-sm btn-outline-secondary" %>
-                <%= link_to "Edit", edit_employee_path(employee), class: "btn btn-sm btn-outline-secondary" %>
-              </div>
-              <small class="text-body-secondary">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>   
+<div class="feature col" id="<%= dom_id employee %>">
+	<h3 class="fs-2 text-body-emphasis"><%= employee.full_name %></h3>
+	<p>
+		Email: <%= employee.email %>
+		<br/>
+		Phone number: <%= employee.phone_number %>
+	</p>
+	<%= link_to "View", employee, class: "icon-link" %>
+	<%= link_to "Edit", edit_employee_path(employee), class: "icon-link" %>
+</div>
