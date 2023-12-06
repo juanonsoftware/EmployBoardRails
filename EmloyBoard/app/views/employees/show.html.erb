@@ -1,12 +1,12 @@
-<div class="container" id="employees">
-  <p style="color: green"><%= notice %></p>
-  <%= render @employee %>
-  <div class="mt-2">
-    <%= button_to "Destroy this employee", @employee, method: :delete, class: 'btn btn-warning',
-      data: {
-            turbo_confirm: "Are you sure that you want to delete?"
-      }
-    %>
-    <%= link_to "Back to employees", employees_path %>
-  </div>
+<div class="container px-4 py-5" id="employee_show">
+	<p style="color: green"><%= notice %></p>
+	<h2 class="pb-2 border-bottom">Employee detail</h2>
+	<%= button_to "Delete", @employee, method: :delete, class: 'btn btn-warning',
+			data: {
+					turbo_confirm: "Are you sure that you want to delete?"
+			}
+		%>
+	<div class="row g-4 py-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+		<%= render "employees/employee_detail", employee: @employee %>
+	</div>
 </div>
