@@ -1,9 +1,9 @@
 class Employee < ApplicationRecord
     has_one_attached :avatar
 
-        def image_as_thumbnail
+        def avatar_as_thumbnail(x, y)
         if avatar.attached?
-            avatar.variant(resize_to_limit: [350, 350]).processed          
+            avatar.variant(resize_to_limit: [x, y]).processed          
         end
     end
 end

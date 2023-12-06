@@ -1,4 +1,7 @@
 <div class="feature col" id="<%= dom_id employee %>">
+	<div>
+		<%= image_tag employee.avatar_as_thumbnail(250, 250) if employee.avatar.attached? %>
+	</div>
 	<h3 class="fs-2 text-body-emphasis"><%= employee.full_name %></h3>
 	<p>
 		Email: <%= employee.email %>

@@ -2,7 +2,7 @@
 	<p style="color: green"><%= notice %></p>
 	<h2 class="pb-2 border-bottom">Employees</h2>
 	<%= link_to "New employee", new_employee_path, class: "btn btn-primary" %>
-	<div class="row g-4 py-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+	<div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
 		<% @employees.each do |employee| %>
 			<%= render employee %>
 		<% end %>
