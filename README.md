@@ -23,4 +23,4 @@ docker compose -f employboard-docker-compose.yml run --service-ports --build web
 ```
 
 ## Start a container and maps to /usr/src/app
-docker run -it --rm -v ./EmloyBoard:/usr/src/app mydockercity/rubyonrails:latest-alpine /bin/sh
+docker run -it --rm -v .\EmloyBoard:/usr/src/app mydockercity/rubyonrails:latest-alpine /bin/sh

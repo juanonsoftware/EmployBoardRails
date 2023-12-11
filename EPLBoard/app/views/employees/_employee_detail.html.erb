@@ -1,0 +1,15 @@
+<div class="feature col" id="<%= dom_id employee %>">
+	<h3 class="fs-2 text-body-emphasis"><%= employee.full_name %></h3>
+	<p>
+		Email: <%= employee.email %>
+		<br/>
+		Phone number: <%= employee.phone_number %>
+	</p>
+	<div class="mt-2">
+		<%= link_to "Edit", edit_employee_path(employee), class: "icon-link" %>
+	</div>
+</div>
+<div class="feature col">
+	<h3 class="fs-2 text-body-emphasis">Avatar</h3>
+	<%= image_tag employee.avatar_as_thumbnail(350, 350), class: "img-thumbnail" if employee.avatar.attached? %>
+</div>

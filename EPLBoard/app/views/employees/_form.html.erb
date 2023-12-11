@@ -1,27 +1,38 @@
-<%= form_with(model: employee) do |form| %>
-  <% if employee.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
-
-      <ul>
-        <% employee.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :full_name, style: "display: block" %>
-    <%= form.text_field :full_name %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="feature col" id="epmloyee_form">
+	<h3 class="fs-2 text-body-emphasis"><%= employee.full_name %></h3>
+	<%= form_with(model: employee) do |form| %>
+		<% if employee.errors.any? %>
+			<div style="color: red">
+				<h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+				<ul>
+					<% employee.errors.each do |error| %>
+						<li><%= error.full_message %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<div class="mb-3">
+			<%= form.label :full_name, style: "display: block", class: "form-label" %>
+			<%= form.text_field :full_name, class: "form-control" %>
+		</div>
+		<div class="mb-3">
+			<%= form.label :email, style: "display: block", class: "form-label" %>
+			<%= form.text_field :email, class: "form-control" %>
+		</div>
+		<div class="mb-3">
+			<%= form.label :phone_number, style: "display: block", class: "form-label" %>
+			<%= form.text_field :phone_number, class: "form-control" %>
+		</div>
+		<div class="mb-3">
+			<%= form.label :avatar, style: "display: block", class: "form-label" %>
+			<%= form.file_field :avatar, class: "form-control" %>
+		</div>
+		<div>
+			<%= form.submit class: "btn btn-primary" %>
+		</div>
+	<% end %>
+</div>
+<div class="feature col" id="epmloyee_form">
+	<h3 class="fs-2 text-body-emphasis">Avatar</h3>
+	<%= image_tag employee.avatar_as_thumbnail(350, 350), class: "img-thumbnail" if employee.avatar.attached? %>
+</div>

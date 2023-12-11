@@ -1,16 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-
-  <div class="container" id="employees">
-    <h1>Employees</h1>
-
-    <%= link_to "New employee", new_employee_path, class: "" %>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <% @employees.each do |employee| %>
-      <%= render employee %>
-      <% end %>
-    </div>
-  </div>  
-
-
+<div id="employees">
+	<p style="color: green"><%= notice %></p>
+	<h2 class="pb-2 border-bottom">Employees</h2>
+	<%= link_to "New employee", new_employee_path, class: "btn btn-primary" %>
+	<div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+		<% @employees.each do |employee| %>
+			<%= render employee %>
+		<% end %>
+	</div>
+</div>
